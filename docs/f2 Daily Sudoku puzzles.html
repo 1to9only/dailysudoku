@@ -1,0 +1,814 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<title>Daily Sudoku puzzles</title>
+<!-- link rel="stylesheet" href="templates/subSilver/subSilver.css" type="text/css" -->
+<style type="text/css">
+<!--
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http://www.subBlue.com
+
+  NOTE: These CSS definitions are stored within the main page body so that you can use the phpBB2
+  theme administration centre. When you have finalised your style you could cut the final CSS code
+  and place it in an external file, deleting this section to save bandwidth.
+*/
+
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+body {
+  background-color: #E5E5E5;
+  scrollbar-face-color: #DEE3E7;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-shadow-color: #DEE3E7;
+  scrollbar-3dlight-color: #D1D7DC;
+  scrollbar-arrow-color:  #006699;
+  scrollbar-track-color: #EFEFEF;
+  scrollbar-darkshadow-color: #98AAB1;
+}
+
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #006699; }
+a:hover   { text-decoration: underline; color : #DD6900; }
+hr  { height: 0px; border: solid #D1D7DC 0px; border-top-width: 1px;}
+
+/* This is the border line & background colour round the entire page */
+.bodyline { background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline  { background-color: #FFFFFF; border: 2px #006699 solid; }
+
+/* Main table cell colours and backgrounds */
+td.row1 { background-color: #EFEFEF; }
+td.row2 { background-color: #DEE3E7; }
+td.row3 { background-color: #D1D7DC; }
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+    background-color: #FFFFFF;
+    background-image: url(templates/subSilver/images/cellpic2.jpg);
+    background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th  {
+  color: #FFA34F; font-size: 11px; font-weight : bold;
+  background-color: #006699; height: 25px;
+  background-image: url(templates/subSilver/images/cellpic3.gif);
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+      background-image: url(templates/subSilver/images/cellpic1.gif);
+      background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px;
+}
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+  height: 29px;
+  border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+  font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px;
+}
+td.row3Right,td.spaceRow {
+  background-color: #D1D7DC; border: #FFFFFF; border-style: solid;
+}
+
+th.thHead,td.catHead { font-size: 12px; border-width: 1px 1px 0px 1px; }
+th.thSides,td.catSides,td.spaceRow   { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right  { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft    { border-width: 0px 0px 0px 1px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop   { border-width: 1px 0px 0px 0px; }
+th.thCornerL { border-width: 1px 0px 0px 1px; }
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle  {
+  font-weight: bold; font-size: 22px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none; line-height : 120%; color : #000000;
+}
+
+/* General text */
+.gen { font-size : 12px; }
+.genmed { font-size : 11px; }
+.gensmall { font-size : 10px; }
+.gen,.genmed,.gensmall { color : #000000; }
+a.gen,a.genmed,a.gensmall { color: #006699; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover { color: #DD6900; text-decoration: underline; }
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu   { font-size : 11px; color : #000000 }
+a.mainmenu    { text-decoration: none; color : #006699;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Forum category titles */
+.cattitle   { font-weight: bold; font-size: 12px ; letter-spacing: 1px; color : #006699}
+a.cattitle    { text-decoration: none; color : #006699; }
+a.cattitle:hover{ text-decoration: underline; }
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink    { font-weight: bold; font-size: 12px; color : #006699; }
+a.forumlink   { text-decoration: none; color : #006699; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav      { font-weight: bold; font-size: 11px; color : #000000;}
+a.nav     { text-decoration: none; color : #006699; }
+a.nav:hover   { text-decoration: underline; }
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle,h1,h2 { font-weight: bold; font-size: 11px; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #006699; }
+a.topictitle:visited { text-decoration: none; color : #5493B4; }
+a.topictitle:hover  { text-decoration: underline; color : #DD6900; }
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name     { font-size : 11px; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails    { font-size : 10px; color : #000000; }
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 12px; line-height: 18px}
+a.postlink:link { text-decoration: none; color : #006699 }
+a.postlink:visited { text-decoration: none; color : #5493B4; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+
+/* Quote & Code blocks */
+.code {
+  font-family: Courier, 'Courier New', sans-serif; font-size: 11px; color: #006600;
+  background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+  border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+.quote {
+  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444; line-height: 125%;
+  background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+  border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+/* Copyright and bottom info */
+.copyright    { font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright   { color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+
+/* Form elements */
+input,textarea, select {
+  color : #000000;
+  font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+  border-color : #000000;
+}
+
+/* The text input fields background colour */
+input.post, textarea.post, select {
+  background-color : #FFFFFF;
+}
+
+input { text-indent : 2px; }
+
+/* The buttons used for bbCode styling in message post */
+input.button {
+  background-color : #EFEFEF;
+  color : #000000;
+  font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option */
+input.mainoption {
+  background-color : #FAFAFA;
+  font-weight : bold;
+}
+
+/* None-bold submit button */
+input.liteoption {
+  background-color : #FAFAFA;
+  font-weight : normal;
+}
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #DEE3E7; border-style: none; }
+-->
+</style>
+</head>
+<body bgcolor="#E5E5E5" text="#000000" link="#006699" vlink="#5493B4">
+
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+  <tr>
+    <td class="bodyline"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td><a href="index.html"><img src="templates/subSilver/images/logo_phpBB.gif" border="0" alt="dailysudoku.com Forum Index" vspace="1" /></a></td>
+        <td align="center" width="100%" valign="middle"><span class="maintitle"><a href="./index.html">dailysudoku.com</a></span><br /><span class="gen">ARCHIVED by 1to9only<br />&nbsp; </span>
+        </td>
+      </tr>
+    </table>
+
+    <br />
+
+  <table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
+  <tr>
+    <td align="left"  valign="bottom" colspan="2"><span class="maintitle">Daily Sudoku puzzles</span>
+    <td align="right" valign="bottom" colspan="2">ARCHIVED: October 31, 2022
+  </tr>
+  </table>
+
+  <table border="0" cellpadding="4" cellspacing="1" width="100%" class="forumline">
+  <tr>
+    <th             align="center" class="thCornerL" nowrap="nowrap">&nbsp;Topics&nbsp;</th>
+    <th width="50"  align="center" class="thTop"     nowrap="nowrap">&nbsp;Replies&nbsp;</th>
+    <th width="100" align="center" class="thTop"     nowrap="nowrap">&nbsp;Author&nbsp;</th>
+    <th width="50"  align="center" class="thTop"     nowrap="nowrap">&nbsp;Views&nbsp;</th>
+    <th             align="center" class="thCornerR" nowrap="nowrap">&nbsp;Last Post&nbsp;</th>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9214-00-oct-31-vh.htm" class="topictitle">Oct 31 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">60</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Oct 31, 2022 1:35 pm<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9212-00-oct-28-vh.htm" class="topictitle">Oct 28 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">TomC</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">219</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Oct 28, 2022 2:34 pm<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9210-00-oct-22-vh.htm" class="topictitle">Oct 22 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">596</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed Oct 26, 2022 2:28 pm<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9209-00-oct-19-vh.htm" class="topictitle">Oct 19 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">428</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed Oct 19, 2022 10:58 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9206-00-oct-09-vh.htm" class="topictitle">Oct 09 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">953</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Oct 09, 2022 8:44 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9204-00-oct-06-vh.htm" class="topictitle">Oct 06 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">891</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Oct 06, 2022 10:06 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9203-00-oct-04-vh.htm" class="topictitle">Oct 04 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">567</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Oct 04, 2022 9:06 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9202-00-oct-02-vh.htm" class="topictitle">Oct 02 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">841</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Oct 03, 2022 5:58 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9201-00-sep-30-vh.htm" class="topictitle">Sep 30 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">683</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Oct 02, 2022 9:55 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9199-00-sep-25-vh.htm" class="topictitle">Sep 25 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">725</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Sep 25, 2022 10:06 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9198-00-sep-22-vh.htm" class="topictitle">Sep 22 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">910</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Sep 22, 2022 3:48 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9197-00-sep-20-vh.htm" class="topictitle">Sep 20 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">764</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Sep 20, 2022 2:45 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9194-00-sep-10-vh.htm" class="topictitle">Sep 10 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1248</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Sep 10, 2022 12:38 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9193-00-sep-08-vh.htm" class="topictitle">Sep 08 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">878</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Sep 08, 2022 8:31 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9192-00-sep-02-vh.htm" class="topictitle">Sep 02 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1029</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Sep 02, 2022 8:44 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9191-00-aug-29-vh.htm" class="topictitle">Aug 29 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1629</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Aug 30, 2022 1:24 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9190-00-aug-27-vh.htm" class="topictitle">Aug 27 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1246</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Aug 29, 2022 9:20 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9188-00-aug-25-vh.htm" class="topictitle">Aug 25 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1098</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Aug 27, 2022 9:12 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9187-00-aug-23-vh.htm" class="topictitle">Aug 23 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1392</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Aug 23, 2022 7:37 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9185-00-aug-17-vh.htm" class="topictitle">Aug 17 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">Earl</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2065</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed Aug 17, 2022 8:38 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9184-00-aug-12-vh.htm" class="topictitle">Aug 12 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2078</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Aug 12, 2022 2:59 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9183-00-aug-08-vh.htm" class="topictitle">Aug 08 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1800</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Aug 08, 2022 11:32 am<br />Earl</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9182-00-aug-06-vh.htm" class="topictitle">Aug 06 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1484</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Aug 06, 2022 9:20 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9180-00-aug-01-vh.htm" class="topictitle">Aug 01 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1815</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Aug 01, 2022 9:48 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9179-00-jul-30-vh.htm" class="topictitle">Jul 30 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1746</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Jul 30, 2022 7:31 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9177-00-jul-27-vh.htm" class="topictitle">Jul 27 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2205</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed Jul 27, 2022 10:55 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9176-00-jul-25-vh.htm" class="topictitle">Jul 25 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2355</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jul 26, 2022 2:38 am<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9175-00-jul-22-vh.htm" class="topictitle">Jul 22 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2289</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jul 25, 2022 9:31 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9173-00-jul-19-vh.htm" class="topictitle">Jul 19 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2057</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jul 19, 2022 10:01 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9172-00-jul-17-vh.htm" class="topictitle">Jul 17 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2408</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jul 18, 2022 11:43 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9171-00-jul-14-vh.htm" class="topictitle">Jul 14 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1955</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Jul 15, 2022 8:27 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9169-00-jul-09-vh.htm" class="topictitle">Jul 09 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2555</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jul 11, 2022 5:58 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9168-00-jul-07-vh.htm" class="topictitle">Jul 07 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2184</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Jul 07, 2022 9:18 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9167-00-jul-01-vh.htm" class="topictitle">Jul 01 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2346</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Jul 01, 2022 12:34 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9166-00-jun-30-vh.htm" class="topictitle">Jun 30 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2717</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Jun 30, 2022 12:07 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9164-00-jun-18-vh.htm" class="topictitle">Jun 18 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3669</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jun 20, 2022 6:48 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9162-00-jun-16-vh.htm" class="topictitle">Jun 16 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2802</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Jun 16, 2022 9:11 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9160-00-jun-12-vh.htm" class="topictitle">Jun 12 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4987</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Jun 12, 2022 2:35 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9159-00-jun-09-vh.htm" class="topictitle">Jun 09 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">11</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">7969</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Jun 12, 2022 2:13 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9156-00-jun-03-vh.htm" class="topictitle">Jun 03 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5827</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Jun 09, 2022 10:17 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9146-00-may-10-vh.htm" class="topictitle">May 10 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5187</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jun 07, 2022 10:44 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9154-00-may-31-vh.htm" class="topictitle">May 31 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3803</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jun 07, 2022 10:28 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9158-00-jun-07-vh.htm" class="topictitle">Jun 07 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3842</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jun 07, 2022 7:57 pm<br />Pat</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9157-00-jun-05-vh.htm" class="topictitle">Jun 05 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5045</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jun 07, 2022 6:54 pm<br />glesco</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9152-00-may-28vh.htm" class="topictitle">May 28VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">Earl</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3550</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun May 29, 2022 4:19 pm<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9151-00-it's-a-greater-than-sudoku.can't-crack-it.can-you.htm" class="topictitle">It's a greater than Sudoku. Can't crack it. Can you?</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">sobspaour@tapi.re</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5196</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat May 28, 2022 4:19 pm<br />sobspaour@tapi.re</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9149-00-may-22-vh.htm" class="topictitle">May 22 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3855</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu May 26, 2022 10:06 am<br />Ghostrider13</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t744-00-unique-rectangles-may-2-2006.htm" class="topictitle">Unique Rectangles:  May 2, 2006</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">18</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">keith</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">47983</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed May 18, 2022 3:51 pm<br />Jimbo0909</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9139-00-no-puzzle-for-2-days.htm" class="topictitle">No puzzle for 2 days</a></span><span class="gensmall"><br />
+     [ <img src="templates/subSilver/images/icon_minipost.gif" alt="Goto page" title="Goto page" />Goto page: <a href="t9139-00-no-puzzle-for-2-days.htm">1</a>, <a href="t9139-20-no-puzzle-for-2-days.htm">2</a> ] </span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">27</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">hughwill</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">23549</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun May 15, 2022 3:55 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9147-00-may-14-vh.htm" class="topictitle">May 14 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3267</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat May 14, 2022 8:45 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9145-00-may-08-vh.htm" class="topictitle">May 08 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4303</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon May 09, 2022 7:36 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9142-00-may-01-vh.htm" class="topictitle">May 01 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">TomC</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5831</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed May 04, 2022 3:12 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9141-00-apr-30-vh.htm" class="topictitle">Apr 30 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">TomC</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3683</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Apr 30, 2022 9:33 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9138-00-apr-20-vh.htm" class="topictitle">Apr 20 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6049</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Apr 23, 2022 1:01 am<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9137-00-apr-14-vh.htm" class="topictitle">Apr 14 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">10</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">8309</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Apr 16, 2022 9:21 pm<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9136-00-apr-12-vh.htm" class="topictitle">Apr 12 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3724</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Apr 12, 2022 1:45 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9134-00-apr-09-vh.htm" class="topictitle">Apr 09 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3158</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Apr 10, 2022 7:39 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9132-00-apr-07-vh.htm" class="topictitle">Apr 07 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">dongrave</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4232</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Apr 09, 2022 9:39 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9130-00-apr-01-vh.htm" class="topictitle">Apr 01 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3216</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Apr 03, 2022 6:13 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9129-00-mar-29-vh.htm" class="topictitle">Mar 29 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3343</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Mar 29, 2022 10:23 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9127-00-mar-26-vh.htm" class="topictitle">Mar 26 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3525</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Mar 26, 2022 12:06 pm<br />Earl</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9125-00-mar-23-vh.htm" class="topictitle">Mar 23 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">TomC</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3261</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed Mar 23, 2022 10:25 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9122-00-mar-14-vh.htm" class="topictitle">Mar 14 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4039</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Mar 18, 2022 9:40 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9120-00-mar-09-vh.htm" class="topictitle">Mar 09 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4559</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Mar 11, 2022 6:40 pm<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9119-00-mar-07-vh.htm" class="topictitle">Mar 07 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3593</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Mar 07, 2022 10:36 am<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9117-00-mar-05-vh.htm" class="topictitle">Mar 05 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">0</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3797</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sat Mar 05, 2022 2:31 pm<br />ZeroAssoluto</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9104-00-13-feb-2022-vh.htm" class="topictitle">13-Feb-2022 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">8</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">hughwill</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">8273</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Mar 01, 2022 3:49 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9115-00-feb-28-vh.htm" class="topictitle">Feb 28 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3465</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Feb 28, 2022 4:16 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9110-00-feb-20-vh.htm" class="topictitle">Feb 20 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">2</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4611</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Feb 20, 2022 1:34 pm<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9106-00-feb-16-vh.htm" class="topictitle">Feb 16 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4618</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Feb 17, 2022 1:57 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9102-00-feb-09-vh.htm" class="topictitle">Feb 09 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">Earl</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">5057</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Wed Feb 09, 2022 9:16 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9101-00-feb-05-vh.htm" class="topictitle">Feb 05 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3554</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Sun Feb 06, 2022 10:20 am<br />TomC</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9098-00-jan-29-vh.htm" class="topictitle">Jan 29 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4782</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jan 31, 2022 8:34 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9096-00-jan-27-vh.htm" class="topictitle">Jan 27 VH</a></span><span class="gensmall"><br />
+     [ <img src="templates/subSilver/images/icon_minipost.gif" alt="Goto page" title="Goto page" />Goto page: <a href="t9096-00-jan-27-vh.htm">1</a>, <a href="t9096-20-jan-27-vh.htm">2</a> ] </span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">21</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">16311</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Jan 28, 2022 3:56 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9094-00-jan-22-vh.htm" class="topictitle">Jan 22 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">10</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">8553</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jan 24, 2022 2:32 pm<br />dongrave</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9095-00-vh-jan-24th.htm" class="topictitle">VH Jan 24th</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">1</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">Mogulmeister</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3631</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jan 24, 2022 11:16 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9092-00-jan-18-vh.htm" class="topictitle">Jan 18 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">3</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">4533</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Tue Jan 18, 2022 7:14 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9091-00-vh-jan-12.htm" class="topictitle">VH Jan 12</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">7</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">Mogulmeister</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6969</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Thu Jan 13, 2022 1:37 pm<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9088-00-jan-08-vh.htm" class="topictitle">Jan 08 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">ZeroAssoluto</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6453</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Mon Jan 10, 2022 11:16 am<br />Mogulmeister</span></td>
+  </tr>
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><a href="t9087-00-jan-05-vh.htm" class="topictitle">Jan 05 VH</a></span><span class="gensmall"><br /></span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6</span></td>
+    <td class="row3" align="center" valign="middle"><span class="name">TomC</span></td>
+    <td class="row2" align="center" valign="middle"><span class="postdetails">6768</span></td>
+    <td class="row3Right" align="center" valign="middle" nowrap="nowrap"><span class="postdetails">Fri Jan 07, 2022 10:54 am<br />Mogulmeister</span></td>
+  </tr>
+  </table>
+
+    </td>
+  </tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+  <tr>
+    <td class="row1" width="100%"><span class="topictitle"><font color="red" size="+1">Only topics with updates in 2022 are included</font></span><span class="gensmall"><br /></span></td>
+  </tr>
+</table>
+<p>&nbsp;
+</body>
+</html>

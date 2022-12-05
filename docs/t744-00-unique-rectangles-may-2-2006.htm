@@ -1,0 +1,2088 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="top" href="./index.html" title="dailysudoku.com Forum Index" />
+<link rel="search" href="./search.php" title="Search" />
+<link rel="help" href="./faq.php" title="FAQ" />
+<link rel="author" href="./memberlist.php" title="Memberlist" />
+<link rel="prev" href="viewtopic.php?t=744&amp;view=previous" title="View previous topic" />
+<link rel="next" href="viewtopic.php?t=744&amp;view=next" title="View next topic" />
+<link rel="up" href="viewforum.php?f=2" title="Daily Sudoku puzzles" />
+<link rel="chapter forum" href="viewforum.php?f=2" title="Daily Sudoku puzzles" />
+<link rel="chapter forum" href="viewforum.php?f=4" title="Other puzzles" />
+<link rel="chapter forum" href="viewforum.php?f=10" title="Solving techniques, and terminology" />
+<link rel="chapter forum" href="viewforum.php?f=5" title="General discussion" />
+<link rel="chapter forum" href="viewforum.php?f=9" title="Site help" />
+<link rel="chapter forum" href="viewforum.php?f=1" title="Test" />
+<link rel="chapter forum" href="viewforum.php?f=11" title="Puzzles by daj" />
+<link rel="chapter forum" href="viewforum.php?f=3" title="The Sudoku Book puzzles" />
+<link rel="chapter forum" href="viewforum.php?f=6" title="Daily Sudoku Squiggly puzzles" />
+<link rel="chapter forum" href="viewforum.php?f=7" title="Daily Sudoku Monster puzzles" />
+<link rel="chapter forum" href="viewforum.php?f=12" title="Any other variant" />
+
+<title>dailysudoku.com :: View topic - Unique Rectangles:  May 2, 2006</title>
+<!-- link rel="stylesheet" href="templates/subSilver/subSilver.css" type="text/css" -->
+<style type="text/css">
+<!--
+/*
+  The original subSilver Theme for phpBB version 2+
+  Created by subBlue design
+  http://www.subBlue.com
+
+  NOTE: These CSS definitions are stored within the main page body so that you can use the phpBB2
+  theme administration centre. When you have finalised your style you could cut the final CSS code
+  and place it in an external file, deleting this section to save bandwidth.
+*/
+
+/* General page style. The scroll bar colours only visible in IE5.5+ */
+body {
+	background-color: #E5E5E5;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+}
+
+/* General font families for common tags */
+font,th,td,p { font-family: Verdana, Arial, Helvetica, sans-serif }
+a:link,a:active,a:visited { color : #006699; }
+a:hover		{ text-decoration: underline; color : #DD6900; }
+hr	{ height: 0px; border: solid #D1D7DC 0px; border-top-width: 1px;}
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #98AAB1 solid; }
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #FFFFFF; border: 2px #006699 solid; }
+
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #EFEFEF; }
+td.row2	{ background-color: #DEE3E7; }
+td.row3	{ background-color: #D1D7DC; }
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #FFFFFF;
+		background-image: url(templates/subSilver/images/cellpic2.jpg);
+		background-repeat: repeat-y;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+	color: #FFA34F; font-size: 11px; font-weight : bold;
+	background-color: #006699; height: 25px;
+	background-image: url(templates/subSilver/images/cellpic3.gif);
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-image: url(templates/subSilver/images/cellpic1.gif);
+			background-color:#D1D7DC; border: #FFFFFF; border-style: solid; height: 28px;
+}
+
+/*
+  Setting additional nice inner borders for the main table cells.
+  The names indicate which sides the border will be on.
+  Don't worry if you don't understand this, just ignore it :-)
+*/
+td.cat,td.catHead,td.catBottom {
+	height: 29px;
+	border-width: 0px 0px 0px 0px;
+}
+th.thHead,th.thSides,th.thTop,th.thLeft,th.thRight,th.thBottom,th.thCornerL,th.thCornerR {
+	font-weight: bold; border: #FFFFFF; border-style: solid; height: 28px;
+}
+td.row3Right,td.spaceRow {
+	background-color: #D1D7DC; border: #FFFFFF; border-style: solid;
+}
+
+th.thHead,td.catHead { font-size: 12px; border-width: 1px 1px 0px 1px; }
+th.thSides,td.catSides,td.spaceRow	 { border-width: 0px 1px 0px 1px; }
+th.thRight,td.catRight,td.row3Right	 { border-width: 0px 1px 0px 0px; }
+th.thLeft,td.catLeft	  { border-width: 0px 0px 0px 1px; }
+th.thBottom,td.catBottom  { border-width: 0px 1px 1px 1px; }
+th.thTop	 { border-width: 1px 0px 0px 0px; }
+th.thCornerL { border-width: 1px 0px 0px 1px; }
+th.thCornerR { border-width: 1px 1px 0px 0px; }
+
+/* The largest text used in the index page title and toptic title etc. */
+.maintitle	{
+	font-weight: bold; font-size: 22px; font-family: "Trebuchet MS",Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none; line-height : 120%; color : #000000;
+}
+
+/* General text */
+.gen { font-size : 12px; }
+.genmed { font-size : 11px; }
+.gensmall { font-size : 10px; }
+.gen,.genmed,.gensmall { color : #000000; }
+a.gen,a.genmed,a.gensmall { color: #006699; text-decoration: none; }
+a.gen:hover,a.genmed:hover,a.gensmall:hover	{ color: #DD6900; text-decoration: underline; }
+
+/* The register, login, search etc links at the top of the page */
+.mainmenu		{ font-size : 11px; color : #000000 }
+a.mainmenu		{ text-decoration: none; color : #006699;  }
+a.mainmenu:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Forum category titles */
+.cattitle		{ font-weight: bold; font-size: 12px ; letter-spacing: 1px; color : #006699}
+a.cattitle		{ text-decoration: none; color : #006699; }
+a.cattitle:hover{ text-decoration: underline; }
+
+/* Forum title: Text and link to the forums used in: index.php */
+.forumlink		{ font-weight: bold; font-size: 12px; color : #006699; }
+a.forumlink 	{ text-decoration: none; color : #006699; }
+a.forumlink:hover{ text-decoration: underline; color : #DD6900; }
+
+/* Used for the navigation text, (Page 1,2,3 etc) and the navigation bar when in a forum */
+.nav			{ font-weight: bold; font-size: 11px; color : #000000;}
+a.nav			{ text-decoration: none; color : #006699; }
+a.nav:hover		{ text-decoration: underline; }
+
+/* titles for the topics: could specify viewed link colour too */
+.topictitle,h1,h2	{ font-weight: bold; font-size: 11px; color : #000000; }
+a.topictitle:link   { text-decoration: none; color : #006699; }
+a.topictitle:visited { text-decoration: none; color : #5493B4; }
+a.topictitle:hover	{ text-decoration: underline; color : #DD6900; }
+
+/* Name of poster in viewmsg.php and viewtopic.php and other places */
+.name			{ font-size : 11px; color : #000000;}
+
+/* Location, number of posts, post date etc */
+.postdetails		{ font-size : 10px; color : #000000; }
+
+/* The content of the posts (body of text) */
+.postbody { font-size : 12px; line-height: 18px}
+a.postlink:link	{ text-decoration: none; color : #006699 }
+a.postlink:visited { text-decoration: none; color : #5493B4; }
+a.postlink:hover { text-decoration: underline; color : #DD6900}
+
+/* Quote & Code blocks */
+.code {
+	font-family: Courier, 'Courier New', sans-serif; font-size: 11px; color: #006600;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+.quote {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #444444; line-height: 125%;
+	background-color: #FAFAFA; border: #D1D7DC; border-style: solid;
+	border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px
+}
+
+/* Copyright and bottom info */
+.copyright		{ font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #444444; letter-spacing: -1px;}
+a.copyright		{ color: #444444; text-decoration: none;}
+a.copyright:hover { color: #000000; text-decoration: underline;}
+
+/* Form elements */
+input,textarea, select {
+	color : #000000;
+	font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+	border-color : #000000;
+}
+
+/* The text input fields background colour */
+input.post, textarea.post, select {
+	background-color : #FFFFFF;
+}
+
+input { text-indent : 2px; }
+
+/* The buttons used for bbCode styling in message post */
+input.button {
+	background-color : #EFEFEF;
+	color : #000000;
+	font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* The main submit button option */
+input.mainoption {
+	background-color : #FAFAFA;
+	font-weight : bold;
+}
+
+/* None-bold submit button */
+input.liteoption {
+	background-color : #FAFAFA;
+	font-weight : normal;
+}
+
+/* This is the line in the posting page which shows the rollover
+  help line. This is actually a text box, but if set to be the same
+  colour as the background no one will know ;)
+*/
+.helpline { background-color: #DEE3E7; border-style: none; }
+
+/* Import the fancy styles for IE only (NS4.x doesn't use the @import function) */
+@import url("templates/subSilver/formIE.css");
+-->
+</style>
+</head>
+<body bgcolor="#E5E5E5" text="#000000" link="#006699" vlink="#5493B4">
+
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+	<tr>
+		<td class="bodyline"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td><a href="index.html"><img src="templates/subSilver/images/logo_phpBB.gif" border="0" alt="dailysudoku.com Forum Index" vspace="1" /></a></td>
+				<td align="center" width="100%"
+				valign="middle"><span
+				class="maintitle"><a href="./">dailysudoku.com</a></span><br /><span class="gen">ARCHIVED by 1to9only<br />&nbsp; </span>
+				<table cellspacing="0" cellpadding="2" border="0">
+					<tr>
+						<td align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="faq.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_faq.gif" width="12" height="13" border="0" alt="FAQ" hspace="3" />FAQ</a>&nbsp; &nbsp;<a href="search.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_search.gif" width="12" height="13" border="0" alt="Search" hspace="3" />Search</a>&nbsp; &nbsp;<a href="memberlist.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_members.gif" width="12" height="13" border="0" alt="Memberlist" hspace="3" />Memberlist</a>&nbsp; &nbsp;<a href="groupcp.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_groups.gif" width="12" height="13" border="0" alt="Usergroups" hspace="3" />Usergroups</a>&nbsp;
+						&nbsp;<a href="profile.php?mode=register" class="mainmenu"><img src="templates/subSilver/images/icon_mini_register.gif" width="12" height="13" border="0" alt="Register" hspace="3" />Register</a>&nbsp;
+						</span></td>
+					</tr>
+					<tr>
+						<td height="25" align="center" valign="top" nowrap="nowrap"><span class="mainmenu">&nbsp;<a href="profile.php?mode=editprofile" class="mainmenu"><img src="templates/subSilver/images/icon_mini_profile.gif" width="12" height="13" border="0" alt="Profile" hspace="3" />Profile</a>&nbsp; &nbsp;<a href="privmsg.php?folder=inbox" class="mainmenu"><img src="templates/subSilver/images/icon_mini_message.gif" width="12" height="13" border="0" alt="Log in to check your private messages" hspace="3" />Log in to check your private messages</a>&nbsp; &nbsp;<a href="login.php" class="mainmenu"><img src="templates/subSilver/images/icon_mini_login.gif" width="12" height="13" border="0" alt="Log in" hspace="3" />Log in</a>&nbsp;</span></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table>
+
+		<br />
+
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+	<td align="left" valign="bottom" colspan="2"><a class="maintitle" href="viewtopic.php?t=744&amp;start=0&amp;postdays=0&amp;postorder=asc&amp;highlight=">Unique Rectangles:  May 2, 2006</a><br />
+	  <span class="gensmall"><b></b><br />
+	  &nbsp; </span></td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0">
+  <tr>
+	<td align="left" valign="bottom" nowrap="nowrap"><span class="nav"><a href="posting.php?mode=newtopic&amp;f=2"><img src="templates/subSilver/images/lang_english/post.gif" border="0" alt="Post new topic" align="middle" /></a>&nbsp;&nbsp;&nbsp;<a href="posting.php?mode=reply&amp;t=744"><img src="templates/subSilver/images/lang_english/reply.gif" border="0" alt="Reply to topic" align="middle" /></a></span></td>
+	<td align="left" valign="middle" width="100%"><span class="nav">&nbsp;&nbsp;&nbsp;<a href="index.html" class="nav">dailysudoku.com Forum Index</a>
+	  -> <a href="viewforum.php?f=2" class="nav">Daily Sudoku puzzles</a></span></td>
+  </tr>
+</table>
+
+<table class="forumline" width="100%" cellspacing="1" cellpadding="3" border="0">
+	<tr align="right">
+		<td class="catHead" colspan="2" height="28"><span class="nav"><a href="viewtopic.php?t=744&amp;view=previous" class="nav">View previous topic</a> :: <a href="viewtopic.php?t=744&amp;view=next" class="nav">View next topic</a> &nbsp;</span></td>
+	</tr>
+	
+	<tr>
+		<th class="thLeft" width="150" height="26" nowrap="nowrap">Author</th>
+		<th class="thRight" nowrap="nowrap">Message</th>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3465"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3465"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sat May 06, 2006 12:14 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Unique Rectangles:  May 2, 2006</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3465"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Revision:  May 27, 2006
+<br />
+
+<br />
+An improved version of this guide is now posted at:
+<br />
+
+<br />
+<a href="http://www.sudoku.com/forums/viewtopic.php?p=29105#29105" target="_blank">http://www.sudoku.com/forums/viewtopic.php?p=29105#29105</a>
+<br />
+
+<br />
+Keith
+<br />
+
+<br />
+=========================================
+<br />
+
+<br />
+<span style="font-weight: bold">Unique Rectangles:  An Introduction</span>
+<br />
+Terminology:  In the following,
+<br />
+cell = square
+<br />
+possibility = candidate
+<br />
+
+<br />
+Most people consider a Sudoku puzzle to be "valid" only if it has a single solution.
+<br />
+
+<br />
+If one is willing to take advantage of this uniqueness, there are solution methods that can be applied.
+<br />
+
+<br />
+Consider the following fragment of a puzzle solution:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; 6&nbsp; &nbsp;-&nbsp; &nbsp; 4&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+|&nbsp; 4&nbsp; &nbsp;-&nbsp; &nbsp; 6&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+This is not a unique solution:  You can interchange 4 and 6 in the above diagram to get a second solution.  Each row, column and block still has one 4 and one 6.
+<br />
+
+<br />
+Now, suppose that the possibilities leading to the solution were:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp; 46 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp; 46 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+This cannot lead to a unique solution:  Each diagonal is either 4 or 6, and they can be interchanged. 
+<br />
+
+<br />
+Either of the above is often called the "deadly pattern".
+<br />
+
+<br />
+Note that this pattern obviously occupies only two rows and two columns.  It also can occupy only TWO blocks.  (If the rectangle occupies four blocks, the corners cannot be interchanged to get another solution.  Try it!)
+<br />
+
+<br />
+How is this useful?  Well, suppose we have the following set of possibilities
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+Case A&#58;
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;46&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+The top right cell MUST be 2.  (It cannot be 4 or 6, because either would force the deadly pattern.)  After reduction, the result is:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp; 2&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;46&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+If three of the cells have only two possibilities, it does not matter how many additional possibilities are on the fourth cell.  The "deadly" candidates can both be eliminated from the fourth cell.
+<br />
+
+<br />
+Suppose instead we have the possibilities:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+Case B&#58;
+<br />
++--------------+
+<br />
+|&nbsp; x&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; x&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 246&nbsp; -&nbsp; &nbsp;46&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+One of the top right or bottom left cells must be 2.  Therefore, none of the cells marked "x" can be 2. 
+<br />
+
+<br />
+There are obvious variations.  Above, the extra possibilities are on a diagonal.  They can be in the same column:
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+or in the same row, or in the same block:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp; 46 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+--------------+--------------+
+<br />
+| 246&nbsp; x&nbsp; &nbsp;246 |&nbsp; x&nbsp; &nbsp;x&nbsp; &nbsp; x&nbsp; |&nbsp; x&nbsp; &nbsp;x&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; x&nbsp; &nbsp;x&nbsp; &nbsp; x&nbsp; |&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; x&nbsp; &nbsp;x&nbsp; &nbsp; x&nbsp; |&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+--------------+--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+<span style="font-style: italic">Etcetera.</span>  I count five variations:  Not in the same block, and in the same row (1), column (2), or on a diagonal (3).  In the same block, and in the same row (4) or column (5).
+<br />
+
+<br />
+Next, suppose there is more than one additional possibility on two of the corners:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+Case C&#58;
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;469 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+The cells on the right have possibilities 2, 4, 6, 9.  At least one of them is not 4 or 6.  Is there another cell containing some of these possibilities?  We might have the following:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;469 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp;29&nbsp; |
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+In this case, we can eliminate 2 and 9 as possibilities in any of the cells marked "x".
+<br />
+
+<br />
+<span style="font-weight: bold"><span style="font-style: italic">What?</span></span>
+<br />
+
+<br />
+Look at it this way.  The rectangle has two corners containing four possibilities.  Normally, one would need to find a quad (four cells) containing the four numbers to make eliminations in other cells.  However, one of the cells does not contain one of the deadly candidates (4 or 6), so we only need to find three cells (a triple) containing the four candidates.  Then, we know that one of the cells outside the triple contains one of the deadly candidates;  we can make eliminations only of the "extra" possibilities (2 or 9).
+<br />
+
+<br />
+There are obvious variations when the extra possibilities are in the same row and / or the same block.
+<br />
+
+<br />
+There may be other possible reductions. Suppose, in the above, that the only possibilities for 4 in the right column are the corners of the rectangle.  One of them must be 4;  neither can be 6, and the result is:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;24&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;49&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp;29&nbsp; |
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+As a final example, let's go back to Case B above, and suppose that the corners of the rectangle are also an X-wing on 4.  Then, the result must be:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; 4&nbsp; &nbsp;-&nbsp; &nbsp;26&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+| 26&nbsp; &nbsp;-&nbsp; &nbsp; 4&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; -&nbsp; |
+<br />
++--------------+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+The bottom right cell cannot be 6, because that would force the deadly pattern.  (In fact, you do not need the full X-wing to make this reduction.  Think about it!)
+<br />
+
+<br />
+How does this apply in practice?  Let's take a look at the puzzle that started this all.  It is the Daily Sudoku of May 2, 2006:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
+Puzzle&#58; DS050206
+<br />
++-------+-------+-------+
+<br />
+| - 7 8 | - - - | - 1 - | 
+<br />
+| 5 - - | - 4 - | - - - | 
+<br />
+| - - 6 | - 7 2 | - - - | 
+<br />
++-------+-------+-------+
+<br />
+| 8 5 - | - - - | - - - | 
+<br />
+| - - 4 | 5 - 7 | 9 - - | 
+<br />
+| - - - | - - - | - 6 4 | 
+<br />
++-------+-------+-------+
+<br />
+| - - - | 1 8 - | 2 - - | 
+<br />
+| - - - | - 6 - | - - 1 | 
+<br />
+| - 1 - | - - - | 3 5 - | 
+<br />
++-------+-------+-------+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+
+<br />
+After using all the techniques required in every previous Daily Sudoku, we get to here.  Now what?
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+
+<br />
++-------------+-------------+-------------+
+<br />
+| 249 7&nbsp; &nbsp;8&nbsp; &nbsp;| 369 5&nbsp; &nbsp;39&nbsp; | 46&nbsp; 1&nbsp; &nbsp;29&nbsp; | 
+<br />
+| 5&nbsp; &nbsp;239 239 | 68&nbsp; 4&nbsp; &nbsp;1&nbsp; &nbsp;| 68&nbsp; 27&nbsp; 279 | 
+<br />
+| 1&nbsp; &nbsp;49&nbsp; 6&nbsp; &nbsp;| 89&nbsp; 7&nbsp; &nbsp;2&nbsp; &nbsp;| 48&nbsp; 3&nbsp; &nbsp;5&nbsp; &nbsp;| 
+<br />
++-------------+-------------+-------------+
+<br />
+| 8&nbsp; &nbsp;5&nbsp; &nbsp;239 | 4&nbsp; &nbsp;239 6&nbsp; &nbsp;| 1&nbsp; &nbsp;27&nbsp; 237 | 
+<br />
+| 23&nbsp; 6&nbsp; &nbsp;4&nbsp; &nbsp;| 5&nbsp; &nbsp;1&nbsp; &nbsp;7&nbsp; &nbsp;| 9&nbsp; &nbsp;8&nbsp; &nbsp;23&nbsp; | 
+<br />
+| 7&nbsp; &nbsp;239 1&nbsp; &nbsp;| 29&nbsp; 239 8&nbsp; &nbsp;| 5&nbsp; &nbsp;6&nbsp; &nbsp;4&nbsp; &nbsp;| 
+<br />
++-------------+-------------+-------------+
+<br />
+| 349 349 7&nbsp; &nbsp;| 1&nbsp; &nbsp;8&nbsp; &nbsp;5&nbsp; &nbsp;| 2&nbsp; &nbsp;49&nbsp; 6&nbsp; &nbsp;| 
+<br />
+| 249 8&nbsp; &nbsp;5&nbsp; &nbsp;| 239 6&nbsp; &nbsp;39&nbsp; | 7&nbsp; &nbsp;49&nbsp; 1&nbsp; &nbsp;| 
+<br />
+| 6&nbsp; &nbsp;1&nbsp; &nbsp;29&nbsp; | 7&nbsp; &nbsp;29&nbsp; 4&nbsp; &nbsp;| 3&nbsp; &nbsp;5&nbsp; &nbsp;8&nbsp; &nbsp;| 
+<br />
++-------------+-------------+-------------+
+<br />
+
+<br />
+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+There is a unique rectangle on &lt;39&gt; in R18 C46.  R1C4 and R8C4 cannot be &lt;9&gt;.  In C4, the only possibilities for &lt;3&gt; are the corners of the rectangle.  Therefore, neither of these corners can be &lt;9&gt;.
+<br />
+
+<br />
+There is a unique rectangle on &lt;49&gt; in R78 C18.  R1C1 cannot be &lt;2&gt;.  In C1, the four possibilities on the rectangle corners are &lt;2349&gt;.  We can form a reduced triple with the &lt;23&gt; in R5C1.  Therefore, R1C1 cannot have the possibility &lt;2&gt;.
+<br />
+
+<br />
+There is a unique rectangle on &lt;27&gt; in R24 C89.  R2C9 and R4C9 cannot be &lt;2&gt;.  In C9, the only possibilities for &lt;7&gt; are the corners of the rectangle.  Therefore, neither of these corners can be &lt;2&gt;.
+<br />
+
+<br />
+<span style="font-weight: bold">Closing</span>
+<br />
+
+<br />
+Above is a summary of unique rectangles and solution strategies that are, I believe, most useful to human solvers using pencil and paper.  There is much more on this subject.  Take a look at
+<br />
+
+<br />
+<a href="http://www.sudoku.com/forums/viewtopic.php?p=21804#21804" target="_blank">http://www.sudoku.com/forums/viewtopic.php?p=21804#21804</a>
+<br />
+
+<br />
+I hope this helps.
+<br />
+
+<br />
+Keith
+<br />
+
+<br />
+(Last edit 050706 2:30 pm EDT)</span><span class="gensmall"><br /><br />Last edited by keith on Sun May 28, 2006 4:06 am; edited 3 times in total</span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3472"></a><b>Marty R.</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 12 Feb 2006<br />Posts: 5770<br />Location: Rochester, NY, USA</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3472"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sat May 06, 2006 4:08 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3472"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Hey there, "Mr. Rectangle", very nice primer.  8)
+<br />
+
+<br />
+That thread you linked to looks very intimidating at first glance. I wonder about some of these arcane techniques; are they necessary for one to become a pretty good solver or are they of interest mostly to the Sudoku "wonks" ( I'm not using that word in a negative sense)?</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=383"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=383"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3475"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3475"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sat May 06, 2006 9:57 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Thanks!</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3475"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Marty,
+<br />
+
+<br />
+Thanks for the kind words.  I wrote this because of a comment you made!
+<br />
+
+<br />
+Shameless self-promotion:  I am pleased that Mike Barker has listed this primer as his first resource on Unique Rectangles.  It is in the link I gave in the original post.
+<br />
+
+<br />
+You wrote:
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote">
+<br />
+I wonder about some of these arcane techniques; are they necessary for one to become a pretty good solver ...
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+Actually, I think you are already a pretty good solver!
+<br />
+
+<br />
+In my opinion, strong links and weak links are the keys to becoming a good (human) solver.  If you understand multi-coloring, you can forget about many of these arcane techniques.
+<br />
+
+<br />
+Havard wrote an excellent introduction to strong links:
+<br />
+<a href="http://www.sudoku.com/forums/viewtopic.php?t=3326" target="_blank">http://www.sudoku.com/forums/viewtopic.php?t=3326</a>
+<br />
+
+<br />
+Anyway, sudoku.com is a very interesting site.  You can, for example, find puzzles that have extreme symmetry, or ones that require particular solution methods.
+<br />
+
+<br />
+By the way, today's SudoCue Nightmare was kind of interesting.  It has a couple of unique rectangles, and then some strong links (coloring) that allow you to avoid XYZ- and XY-wings.
+<br />
+
+<br />
+I've posted my solution in the SudoCue forum; here is the link:
+<br />
+
+<br />
+<a href="http://www.sudocue.net/forum/viewtopic.php?p=406#406" target="_blank">http://www.sudocue.net/forum/viewtopic.php?p=406#406</a>
+<br />
+
+<br />
+Best wishes,
+<br />
+
+<br />
+Keith</span><span class="gensmall"><br /><br />Last edited by keith on Sun May 07, 2006 3:46 am; edited 1 time in total</span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3478"></a><b>Robert Ferre</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 09 Apr 2006<br />Posts: 10<br /></span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3478"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sun May 07, 2006 3:20 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3478"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">I'm missing some point of logic here, Keith. Above you said this:
+<br />
+
+<br />
+
+<br />
++-------------+-------------+-------------+
+<br />
+| 249 7   8   | 369 5   39  | 46  1   29  |
+<br />
+| 5   239 239 | 68  4   1   | 68  27  279 |
+<br />
+| 1   49  6   | 89  7   2   | 48  3   5   |
+<br />
++-------------+-------------+-------------+
+<br />
+| 8   5   239 | 4   239 6   | 1   27  237 |
+<br />
+| 23  6   4   | 5   1   7   | 9   8   23  |
+<br />
+| 7   239 1   | 29  239 8   | 5   6   4   |
+<br />
++-------------+-------------+-------------+
+<br />
+| 349 349 7   | 1   8   5   | 2   49  6   |
+<br />
+| 249 8   5   | 239 6   39  | 7   49  1   |
+<br />
+| 6   1   29  | 7   29  4   | 3   5   8   |
+<br />
++-------------+-------------+-------------+
+<br />
+
+<br />
+There is a unique rectangle on &lt;27&gt; in R24 C89. R2C9 and R4C9 cannot be &lt;2&gt;. In C8, the only possibilities for &lt;7&gt; are the corners of the rectangle. Therefore, neither of these corners can be &lt;2&gt;.
+<br />
+
+<br />
+***********
+<br />
+
+<br />
+Now, if C8 contains the only two possibilities for 7, and they are on the corners of the rectangle, wouldn't only one of them become a 7? Why wouldn't the other corner then become a 2? You are saying that 2 can be eliminated from both corners. I don't get it. Same for R24 C9 which you have also eliminated. So you have eliminated 2 from all four corners.  I'm missing something here.
+<br />
+
+<br />
+Robert</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=489"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=489"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3479"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3479"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sun May 07, 2006 4:06 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3479"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Robert,
+<br />
+
+<br />
+Thank you!  You have found a typo.  I said:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote">
+<br />
+In C8, the only possibilities for &lt;7&gt; are the corners of the rectangle. Therefore, neither of these corners can be &lt;2&gt;. 
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+This should be:
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote">
+<br />
+In <span style="font-weight: bold">C9</span>, the only possibilities for &lt;7&gt; are the corners of the rectangle. Therefore, neither of these corners can be &lt;2&gt;. 
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+I have edited to original to correct this.
+<br />
+
+<br />
+If this is still not clear, please let me know.
+<br />
+
+<br />
+Best wishes,
+<br />
+
+<br />
+Keith</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3480"></a><b>Guest</b></span><br /><span class="postdetails"><br /><br /><br /><br /><br /></span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3480"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sun May 07, 2006 10:52 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Re: Unique Rectangles:  May 2, 2006</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3480"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>keith wrote:</b></span></td>	</tr>	<tr>	  <td class="quote"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;469 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp;269 |
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+In this case, we can eliminate 2 and 9 as possibilities in any of the cells marked "x".</td>	</tr></table><span class="postbody">
+<br />
+I see one error in your otherwise very nice primer. The unique rectangle cells with 246 and 469 behave as a single cell. To then have the eqivalent of a naked pair, your fifth cell must contain 29 ... not 269.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap">      <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3481"></a><b>George Woods</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 28 Mar 2006<br />Posts: 304<br />Location: Dorset UK</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3481"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sun May 07, 2006 11:14 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Re: Unique Rectangles:  May 2, 2006</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3481"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">I am too slow to understand this part of your argument You say::
+<br />
++--------------+
+<br />
+|  -   -    x  |
+<br />
+| 46   -   246 |
+<br />
+|  -   -    x  |
+<br />
++--------------+
+<br />
+| 46   -   469 |
+<br />
+|  -   -    x  |
+<br />
+|  -   -   269 |
+<br />
++--------------+
+<br />
+|  -   -    x  |
+<br />
+|  -   -    x  |
+<br />
+|  -   -    x  |
+<br />
++--------------+
+<br />
+[/code]
+<br />
+In this case, we can eliminate 2 and 9 as possibilities in any of the cells marked "x".
+<br />
+
+<br />
+
+<br />
+If I put a 2 into one of your "forbidden" cells I come up with the solution
+<br />
+
+<br />
+
+<br />
+
+<br />
+0 0 0
+<br />
+6 0 4
+<br />
+0 0 0
+<br />
+
+<br />
+4 0 9
+<br />
+0 0 0 
+<br />
+0 0 6
+<br />
+
+<br />
+0 0 2
+<br />
+0 0 0
+<br />
+0 0 0
+<br />
+
+<br />
+and similarly for a 9 a different but apparently valid solution!
+<br />
+
+<br />
+So where have I got it wrong?
+<br />
+
+<br />
+I now realise the answer lies in the posting above</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=466"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=466"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3490"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3490"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sun May 07, 2006 6:45 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Thanks</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3490"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">"Guest" and George,
+<br />
+
+<br />
+Thank you.  I have edited it to make the corrections.
+<br />
+
+<br />
+Keith</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3528"></a><b>George Woods</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 28 Mar 2006<br />Posts: 304<br />Location: Dorset UK</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3528"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Tue May 09, 2006 3:55 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: unique rectangles</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3528"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Keith - Don't you find that knowledge of advanced techniques can sometimes be a "nuisance"
+<br />
+
+<br />
+Today's puzzle (tuesday) has a unique rectangle that allows the placing of a 2 in box8 - so when the puzzle was solved I asked myself- Did it rely on spotting the unique rectangle? -- answer NO-- so if someone asks "how" was it done - it must be better to give the solution that uses "simple" logic!</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=466"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=466"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3543"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3543"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Tue May 09, 2006 10:24 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Well, no</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3543"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">George said:
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote">
+<br />
+Don't you find that knowledge of advanced techniques can sometimes be a "nuisance" 
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+No, I don't think so, but it's an interesting question.  I think each technique is just another tool in the toolbox.  As someone said:  "If all you have is a hammer, every problem looks like a nail."
+<br />
+
+<br />
+I think it is wonderful how SamGJ has everyone flummoxed.  Today's puzzle was "very hard", so we all were looking for X-wings and UR's.  They were there to be found, but not essential!
+<br />
+
+<br />
+If that's the way you found the solution, it must have been the "easiest" for you.
+<br />
+
+<br />
+Someone, in another thread, made the observation:
+<br />
+
+<br />
+<span style="font-style: italic">Computers solve by traversing a hierarchy of heuristics, and by analyzing every pattern before considering the next heuristic.
+<br />
+
+<br />
+Humans solve by recognizing patterns, and then applying heuristics.</span>
+<br />
+
+<br />
+So, if the UR leaps out at you, use it!  Who cares if there was also a hidden single you didn't spot?
+<br />
+
+<br />
+And, my personal opinion:  If you use an online or other solver, lose it!  Print out the puzzle, get a pencil, and find an armchair.  In two weeks your skills will have improved immensely.  (After you have solved a puzzle, by all means go back to the software and step through the solution, to see if you missed something.)
+<br />
+
+<br />
+Best wishes,
+<br />
+
+<br />
+Keith</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3703"></a><b>Marty R.</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 12 Feb 2006<br />Posts: 5770<br />Location: Rochester, NY, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3703"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu May 18, 2006 8:04 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3703"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">The cells on the right have possibilities 2, 4, 6, 9. At least one of them is not 4 or 6. Is there another cell containing some of these possibilities? We might have the following&#58;
+<br />
+
+<br />
+Code&#58;
+<br />
+
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;246 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+| 46&nbsp; &nbsp;-&nbsp; &nbsp;469 |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp;29&nbsp; |
+<br />
++--------------+
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
+|&nbsp; -&nbsp; &nbsp;-&nbsp; &nbsp; x&nbsp; |
+<br />
++--------------+
+<br />
+
+<br />
+In this case, we can eliminate 2 and 9 as possibilities in any of the cells marked &quot;x&quot;.
+<br />
+
+<br />
+What?
+<br />
+
+<br />
+Look at it this way. The rectangle has two corners containing four possibilities. Normally, one would need to find a quad &#40;four cells&#41; containing the four numbers to make eliminations in other cells. However, one of the cells does not contain one of the deadly candidates &#40;4 or 6&#41;, so we only need to find three cells &#40;a triple&#41; containing the four candidates. Then, we know that one of the cells outside the triple contains one of the deadly candidates; we can make eliminations only of the &quot;extra&quot; possibilities &#40;2 or 9&#41;. </td>	</tr></table><span class="postbody"></td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Quote:</b></span></td>	</tr>	<tr>	  <td class="quote"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">Code&#58;
+<br />
+
+<br />
+
+<br />
++-------------+-------------+-------------+
+<br />
+| 249 7&nbsp; &nbsp;8&nbsp; &nbsp;| 369 5&nbsp; &nbsp;39&nbsp; | 46&nbsp; 1&nbsp; &nbsp;29&nbsp; |
+<br />
+| 5&nbsp; &nbsp;239 239 | 68&nbsp; 4&nbsp; &nbsp;1&nbsp; &nbsp;| 68&nbsp; 27&nbsp; 279 |
+<br />
+| 1&nbsp; &nbsp;49&nbsp; 6&nbsp; &nbsp;| 89&nbsp; 7&nbsp; &nbsp;2&nbsp; &nbsp;| 48&nbsp; 3&nbsp; &nbsp;5&nbsp; &nbsp;|
+<br />
++-------------+-------------+-------------+
+<br />
+| 8&nbsp; &nbsp;5&nbsp; &nbsp;239 | 4&nbsp; &nbsp;239 6&nbsp; &nbsp;| 1&nbsp; &nbsp;27&nbsp; 237 |
+<br />
+| 23&nbsp; 6&nbsp; &nbsp;4&nbsp; &nbsp;| 5&nbsp; &nbsp;1&nbsp; &nbsp;7&nbsp; &nbsp;| 9&nbsp; &nbsp;8&nbsp; &nbsp;23&nbsp; |
+<br />
+| 7&nbsp; &nbsp;239 1&nbsp; &nbsp;| 29&nbsp; 239 8&nbsp; &nbsp;| 5&nbsp; &nbsp;6&nbsp; &nbsp;4&nbsp; &nbsp;|
+<br />
++-------------+-------------+-------------+
+<br />
+| 349 349 7&nbsp; &nbsp;| 1&nbsp; &nbsp;8&nbsp; &nbsp;5&nbsp; &nbsp;| 2&nbsp; &nbsp;49&nbsp; 6&nbsp; &nbsp;|
+<br />
+| 249 8&nbsp; &nbsp;5&nbsp; &nbsp;| 239 6&nbsp; &nbsp;39&nbsp; | 7&nbsp; &nbsp;49&nbsp; 1&nbsp; &nbsp;|
+<br />
+| 6&nbsp; &nbsp;1&nbsp; &nbsp;29&nbsp; | 7&nbsp; &nbsp;29&nbsp; 4&nbsp; &nbsp;| 3&nbsp; &nbsp;5&nbsp; &nbsp;8&nbsp; &nbsp;|
+<br />
++-------------+-------------+-------------+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+There is a unique rectangle on &lt;39&gt; in R18 C46. R1C4 and R8C4 cannot be &lt;9&gt;. In C4, the only possibilities for &lt;3&gt; are the corners of the rectangle. Therefore, neither of these corners can be &lt;9&gt;.
+<br />
+
+<br />
+There is a unique rectangle on &lt;49&gt; in R78 C18. R1C1 cannot be &lt;2&gt;. In C1, the four possibilities on the rectangle corners are &lt;2349&gt;. We can form a reduced triple with the &lt;23&gt; in R5C1. Therefore, R1C1 cannot have the possibility &lt;2&gt;.
+<br />
+
+<br />
+There is a unique rectangle on &lt;27&gt; in R24 C89. R2C9 and R4C9 cannot be &lt;2&gt;. In C9, the only possibilities for &lt;7&gt; are the corners of the rectangle. Therefore, neither of these corners can be &lt;2&gt;. </td>	</tr></table><span class="postbody"></td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+Keith,
+<br />
+
+<br />
+I've been studying this concept of the "reduced triple." The first definition was "However, one of the cells does not contain one of the deadly candidates (4 or 6), so we only need to find three cells (a triple) containing the four candidates. Then, we know that one of the cells outside the triple contains one of the deadly candidates;"
+<br />
+
+<br />
+Now look at the "49" rectangle above in cols. 8 and 9. It would seem that r1c1 would meet the definition of "three cells containing the four candidates." However, it was r5c1 that completed the triple. In both this rectangle and the first "46" rectangle shown in the grid with the other numbers filtered out, the third cell contains both of the "extra possibilities."
+<br />
+
+<br />
+So, can we narrow the definition of the reduced triple to say that it must consist of the the two corner cells plus a third cell that must contain both of the extra possibilities?
+<br />
+
+<br />
+My next questions also concern the third cell: must that third cell be only a pair, containing the extra possibilities, such as the "29" in the "46" rectangle and the "23" in the "49" rectangle? 
+<br />
+
+<br />
+If the above answer is "yes", then we're done. If not, the cell could presumably be, using the "49" rectangle and the "23" in r5c1 as an example, "23x", "23xy", or "23xyz." Could "xyz" include either or both of the rectangle numbers, in this case, "4" and/or "9"?</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=383"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=383"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3708"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3708"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Thu May 18, 2006 10:31 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Weak explanation</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3708"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Marty,
+<br />
+
+<br />
+I have always thought this is a very weak explanation.  I think I have figured out how to explain it better.  I was planning to rewrite and expand this Introduction, and post a revised article this weekend.
+<br />
+
+<br />
+Let me try this:
+<br />
+
+<br />
+If you write the UR as
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+12 | 123
+<br />
+12 | 124
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+
+<br />
+then you can make a reduction if there is another cell
+<br />
+
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+12 | 123
+<br />
+12 | 124&nbsp; 34
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+You can eliminate &lt;3&gt; and &lt;4&gt; from all cells that are buddies of &lt;123&gt;, &lt;124&gt;, and &lt;34&gt;.
+<br />
+
+<br />
+Here is the (new) explanation.
+<br />
+
+<br />
+&lt;123&gt;, &lt;124&gt;, and &lt;34&gt; are three cells containing four candidates.  However, &lt;1&gt; and &lt;2&gt; are candidates only on the corners of the UR.  To avoid the deadly pattern, these two cells cannot be &lt;1&gt; AND &lt;2&gt;.  So, the missing (fourth) candidate in the three cells must be &lt;1&gt; or &lt;2&gt;.  So, the three cells must contain either &lt;134&gt; or &lt;234&gt;.  Either way, all occurrences of &lt;34&gt; are in these three cells.
+<br />
+
+<br />
+So, if you can find a cell that contains only the extra possibilities, you can make the eliminations.  The folllowing also works:
+<br />
+</span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Code:</b></span></td>	</tr>	<tr>	  <td class="code">
+<br />
+12 | 123&nbsp; 45
+<br />
+12 | 124&nbsp; 345
+<br />
+</td>	</tr></table><span class="postbody">
+<br />
+and you can eliminate &lt;3&gt;, &lt;4&gt;, and &lt;5&gt; from the other cells.
+<br />
+
+<br />
+So, the principle is to find a reduced subset where the "extra" cells involve only the "extra" candidates.
+<br />
+
+<br />
+You are correct, that eliminations can be made if the "extra" cells involve one of the "deadly" candidates.  But, the reasoning is different, and the eliminations are on the rectangle, not on cells outside the rectangle.
+<br />
+
+<br />
+Stay tuned!
+<br />
+
+<br />
+Keith
+<br />
+
+<br />
+PS:  I realize I have not answered all the specifics of your questions.  I will, but later, after I have had a chance to print and study your message.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3717"></a><b>Marty R.</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 12 Feb 2006<br />Posts: 5770<br />Location: Rochester, NY, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3717"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Fri May 19, 2006 3:55 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: </span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3717"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">As always, thank you Keith. I have been fascinated with rectangles since I first learned about them. I have no quantitative evidence to base this on, but rectangles seem to be one of the most powerful techniques in the "toolbox."  
+<br />
+
+<br />
+One of the reasons I ask such detailed questions is that the way my brain is wired is such that I am unable to deduce all this stuff. Any success I may have at solving has come from learning "rules" and applying them when I can recognize a situation.
+<br />
+
+<br />
+I look forward to the next rectangles primer.</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=383"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=383"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3719"></a><b>David Bryant</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 29 Jul 2005<br />Posts: 559<br />Location: Denver, Colorado</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3719"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Fri May 19, 2006 4:52 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: &quot;UR&quot;s are easy to see</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3719"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody"></span><table width="90%" cellspacing="1" cellpadding="3" border="0" align="center"><tr> 	  <td><span class="genmed"><b>Marty R wrote:</b></span></td>	</tr>	<tr>	  <td class="quote"> ... rectangles seem to be one of the most powerful techniques in the "toolbox."</td>	</tr></table><span class="postbody">
+<br />
+I agree with this -- and I think it's mostly because the rectangle pattern is fairly easy to spot. I've run into a lot of puzzles where a pair can be seen at three corners of the rectangle, meaning that neither of those values can appear in the fourth corner. That's very useful information.  dcb</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=34"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=34"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a> <a href="mailto:davidbryant@att.net"><img src="templates/subSilver/images/lang_english/icon_email.gif" alt="Send e-mail" title="Send e-mail" border="0" /></a> <a href="http://davidbryant.home.att.net" target="_userwww"><img src="templates/subSilver/images/lang_english/icon_www.gif" alt="Visit poster's website" title="Visit poster's website" border="0" /></a>   <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3720"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3720"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Fri May 19, 2006 9:18 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: UR's are good clues</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3720"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Marty,
+<br />
+
+<br />
+As always, it is a pleasure.  I think I have answered your question, with more to come in my revised Introduction to UR's.
+<br />
+
+<br />
+I think this is very powerful, especially when combined with other techniques.  Some people talk about "Almost Unique Rectangles" (AUR's) in which you do not have a cookbook pattern.  Rather, you have a strong clue to look for a short elimination chain.  (Keith's interpretation!)
+<br />
+
+<br />
+Best wishes,
+<br />
+
+<br />
+Keith</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3729"></a><b>guest</b></span><br /><span class="postdetails">Guest<br /><br /><br /><br /><br /></span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3729"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sat May 20, 2006 4:13 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: May 18 daily sudoku</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3729"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">I'd like to know if anybody had problems with sudoku from May 18. I can not find reasoning for given hints.
+<br />
+sudoku lover</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap">      <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="3734"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3734"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sat May 20, 2006 7:23 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: May 18</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3734"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">The last question does not really belong here.
+<br />
+
+<br />
+May 18:  Look for a triple &lt;356&gt; in column 5, and in block 5, and in block 8.
+<br />
+
+<br />
+Keith</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row2"><span class="name"><a name="3896"></a><b>keith</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 19 Sep 2005<br />Posts: 3355<br />Location: near Detroit, Michigan, USA</span><br /></td>
+		<td class="row2" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=3896"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Sun May 28, 2006 4:04 am<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: A better guide</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=3896"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">A much improved guide to unique rectangles is posted here:
+<br />
+
+<br />
+<a href="http://www.sudoku.com/forums/viewtopic.php?p=29105#29105" target="_blank">http://www.sudoku.com/forums/viewtopic.php?p=29105#29105</a>
+<br />
+
+<br />
+Keith</span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row2" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row2" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=149"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr>
+		<td width="150" align="left" valign="top" class="row1"><span class="name"><a name="43660"></a><b>Jimbo0909</b></span><br /><span class="postdetails"><br /><br /><br />Joined: 18 May 2022<br />Posts: 1<br /></span><br /></td>
+		<td class="row1" width="100%" height="28" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%"><a href="viewtopic.php?p=43660"><img src="templates/subSilver/images/icon_minipost.gif" width="12" height="9" alt="Post" title="Post" border="0" /></a><span class="postdetails">Posted: Wed May 18, 2022 3:51 pm<span class="gen">&nbsp;</span>&nbsp; &nbsp;Post subject: Sudoku app</span></td>
+				<td valign="top" nowrap="nowrap"><a href="posting.php?mode=quote&amp;p=43660"><img src="templates/subSilver/images/lang_english/icon_quote.gif" alt="Reply with quote" title="Reply with quote" border="0" /></a>   </td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="postbody">Hello guys, can somebody advise me a good sudoku app in which you personally played? I'm looking for good one, I like to play sudoku and last time I've tried this one and liked it <a href="https://sudokupro.app" target="_blank">https://sudokupro.app</a> but I am looking for something else. thank you <img src="images/smiles/icon_smile.gif" alt="Smile" border="0" /></span><span class="gensmall"></span></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="row1" width="150" align="left" valign="middle"><span class="nav"><a href="#top" class="nav">Back to top</a></span></td>
+		<td class="row1" width="100%" height="28" valign="bottom" nowrap="nowrap"><table cellspacing="0" cellpadding="0" border="0" height="18" width="18">
+			<tr>
+				<td valign="middle" nowrap="nowrap"><a href="profile.php?mode=viewprofile&amp;u=6299"><img src="templates/subSilver/images/lang_english/icon_profile.gif" alt="View user's profile" title="View user's profile" border="0" /></a> <a href="privmsg.php?mode=post&amp;u=6299"><img src="templates/subSilver/images/lang_english/icon_pm.gif" alt="Send private message" title="Send private message" border="0" /></a>     <script language="JavaScript" type="text/javascript"><!--
+
+	if ( navigator.userAgent.toLowerCase().indexOf('mozilla') != -1 && navigator.userAgent.indexOf('5.') == -1 && navigator.userAgent.indexOf('6.') == -1 )
+		document.write(' ');
+	else
+		document.write('</td><td>&nbsp;</td><td valign="top" nowrap="nowrap"><div style="position:relative"><div style="position:absolute"></div><div style="position:absolute;left:3px;top:-1px"></div></div>');
+
+				//--></script><noscript></noscript></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr>
+		<td class="spaceRow" colspan="2" height="1"><img src="templates/subSilver/images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr>
+	<tr align="center">
+		<td class="catBottom" colspan="2" height="28"><table cellspacing="0" cellpadding="0" border="0">
+			<tr><form method="post" action="viewtopic.php?t=744&amp;start=0">
+				<td align="center"><span class="gensmall">Display posts from previous: <select name="postdays"><option value="0" selected="selected">All Posts</option><option value="1">1 Day</option><option value="7">7 Days</option><option value="14">2 Weeks</option><option value="30">1 Month</option><option value="90">3 Months</option><option value="180">6 Months</option><option value="364">1 Year</option></select>&nbsp;<select name="postorder"><option value="asc" selected="selected">Oldest First</option><option value="desc">Newest First</option></select>&nbsp;<input type="submit" value="Go" class="liteoption" name="submit" /></span></td>
+			</form></tr>
+		</table></td>
+	</tr>
+</table>
+
+<table width="100%" cellspacing="2" cellpadding="2" border="0" align="center">
+  <tr>
+	<td align="left" valign="middle" nowrap="nowrap"><span class="nav"><a href="posting.php?mode=newtopic&amp;f=2"><img src="templates/subSilver/images/lang_english/post.gif" border="0" alt="Post new topic" align="middle" /></a>&nbsp;&nbsp;&nbsp;<a href="posting.php?mode=reply&amp;t=744"><img src="templates/subSilver/images/lang_english/reply.gif" border="0" alt="Reply to topic" align="middle" /></a></span></td>
+	<td align="left" valign="middle" width="100%"><span class="nav">&nbsp;&nbsp;&nbsp;<a href="index.html" class="nav">dailysudoku.com Forum Index</a>
+	  -> <a href="viewforum.php?f=2" class="nav">Daily Sudoku puzzles</a></span></td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall">All times are GMT</span><br /><span class="nav"></span>
+	  </td>
+  </tr>
+  <tr>
+	<td align="left" colspan="3"><span class="nav">Page <b>1</b> of <b>1</b></span></td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="2" border="0" align="center">
+  <tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"><span class="gensmall"></span><br />
+	  &nbsp;<br />
+	  </td>
+	<td align="right" valign="top" nowrap="nowrap">
+<form method="get" name="jumpbox" action="viewforum.php" onSubmit="if(document.jumpbox.f.value == -1){return false;}"><table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Jump to:&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ forms['jumpbox'].submit() }"><option value="-1">Select a forum</option><option value="-1">&nbsp;</option><option value="-1">Discussions about the puzzles</option><option value="-1">----------------</option><option value="2"selected="selected">Daily Sudoku puzzles</option><option value="4">Other puzzles</option><option value="-1">&nbsp;</option><option value="-1">General discussion, philosophy, solving methods, and terminology</option><option value="-1">----------------</option><option value="10">Solving techniques, and terminology</option><option value="5">General discussion</option><option value="-1">&nbsp;</option><option value="-1">Site help and testing</option><option value="-1">----------------</option><option value="9">Site help</option><option value="1">Test</option><option value="-1">&nbsp;</option><option value="-1">Archive:  Old and mostly inactive discussions</option><option value="-1">----------------</option><option value="11">Puzzles by daj</option><option value="3">The Sudoku Book puzzles</option><option value="-1">&nbsp;</option><option value="-1">Squigglies, Monsters, and other variants</option><option value="-1">----------------</option><option value="6">Daily Sudoku Squiggly puzzles</option><option value="7">Daily Sudoku Monster puzzles</option><option value="12">Any other variant</option></select><input type="hidden" name="sid" value="00000000000000000000000000000000" />&nbsp;<input type="submit" value="Go" class="liteoption" /></span></td>
+	</tr>
+</table></form>
+
+<span class="gensmall">You <b>cannot</b> post new topics in this forum<br />You <b>cannot</b> reply to topics in this forum<br />You <b>cannot</b> edit your posts in this forum<br />You <b>cannot</b> delete your posts in this forum<br />You <b>cannot</b> vote in polls in this forum<br /></span></td>
+  </tr>
+</table>
+
+
+<div align="center"><span class="copyright"><br /><br />
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB 2.0. If you cannot (for good
+	reason) retain the full copyright we request you at least leave in place the
+	Powered by phpBB line, with phpBB linked to www.phpbb.com. If you refuse
+	to include even this then support on our forums may be affected.
+
+	The phpBB Group : 2002
+// -->
+Powered by <a href="http://www.phpbb.com/" target="_phpbb" class="copyright">phpBB</a> &copy; 2001, 2005 phpBB Group<br /></span></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
+
